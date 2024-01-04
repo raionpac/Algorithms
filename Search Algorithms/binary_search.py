@@ -1,8 +1,18 @@
-def binary_search(elements, target):
+import os
+# Clear the terminal before running the code
+os.system('cls' if os.name == 'nt' else 'clear')
+
+
+def binary_search(elements, target, ascending=True):
     """
     Binary search is an efficient algorithm for finding an item from a sorted list of items. 
     It works by repeatedly dividing in half the portion of the list that could contain the item 
     until you've narrowed the possible locations to just one.
+
+    The time complexity of the binary search algorithm is O(log n). 
+    The algorithm divides the search interval in half with each step. As a result, 
+    the time it takes to search for an element grows logarithmically with the size of the list, 
+    making it very efficient for large datasets.
 
     elements -  Sorted list of elements to search through
     target - The element to search for
@@ -36,9 +46,9 @@ def find_element():
     result = binary_search(sorted_elements, target)
 
     if result != -1:
-        print(f"Element is present at index {result}")
+        print(f"Element is present at index {result}\n")
     else:
-        print("Element is not present in list")
+        print("Element is not present in list\n")
 
 
 find_element()
